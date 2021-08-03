@@ -5,9 +5,7 @@
     'name': 'Partner Communication Bilingual Field',
 
     'summary': """
-    Adds bilingual field to partner to  
-    """,
-    'description': """
+    Adds bilingual field to partner
     """,
 
     'author': 'Coop IT Easy, Robin Keunen',

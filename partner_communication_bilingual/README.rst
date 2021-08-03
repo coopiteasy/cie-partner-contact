@@ -19,6 +19,7 @@ Partner Communication Bilingual Field
 
 |badge1| |badge2| |badge3| 
 
+Adds bilingual field to partner
 
 **Table of contents**
 
