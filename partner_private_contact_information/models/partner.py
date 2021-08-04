@@ -14,8 +14,10 @@ class Partner(models.Model):
     vip_street2 = fields.Char('Private Street2')
     vip_zip = fields.Char('Private Zip', size=24, change_default=True)
     vip_city = fields.Char('Private City')
-    vip_state_id = fields.Many2one("res.country.state", 'State', ondelete='restrict')
-    vip_country_id = fields.Many2one('res.country', 'Country', ondelete='restrict')
+    vip_state_id = fields.Many2one(
+        "res.country.state", 'Private State', ondelete='restrict')
+    vip_country_id = fields.Many2one(
+        'res.country', 'Private Country', ondelete='restrict')
     vip_email = fields.Char('Private Email')
     vip_phone = fields.Char('Private Phone')
     vip_mobile = fields.Char('Private Mobile')
