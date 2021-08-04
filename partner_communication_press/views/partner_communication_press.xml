@@ -42,6 +42,6 @@
     <menuitem
         id="menu_partner_communication_press_type"
         name="Press Type"
-        parent="sales_team.menu_config_address_book"
+        parent="contacts.res_partner_menu_config"
         action="action_partner_communication_press_type" />
 </odoo>
