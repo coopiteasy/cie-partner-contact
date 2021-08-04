@@ -43,6 +43,6 @@
     <menuitem
         id="menu_partner_communication_tag"
         name="Communication Tags"
-        parent="sales_team.menu_config_address_book"
+        parent="contacts.res_partner_menu_config"
         action="action_partner_communication_tag" />
 </odoo>
