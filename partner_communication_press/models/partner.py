@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 
-from openerp import api, models, fields
+from odoo import api, models, fields
 
 
 class Partner(models.Model):
@@ -24,7 +24,6 @@ class Partner(models.Model):
                     # Empty all communication_press_type
                     vals['communication_press_type_ids'] = [(5,)]
         return super(Partner, self).write(vals)
-
 
 
 class PartnerCommunicationPressType(models.Model):
