@@ -12,7 +12,7 @@
 
     'author': 'Coop IT Easy, Robin Keunen',
     'license': 'AGPL-3',
-    'version': '11.0.1.0',
+    'version': '12.0.1.0',
     'website': "https://coopiteasy.be",
 
     'category': 'Partner Management',
