@@ -10,14 +10,3 @@ class Partner(models.Model):
 
     communication_tag_ids = fields.Many2many('res.partner.communication.tag',
                                              string="Communication")
-
-
-class PartnerCommunicationTag(models.Model):
-    _name = 'res.partner.communication.tag'
-    _description = "Partner Communication Tag"
-    _order = 'name'
-
-    name = fields.Char("Name", required=True)
-    description = fields.Text("Description")
-    partner_ids = fields.Many2many('res.partner', string="Partners")
-    active = fields.Boolean("Active", default=True)
