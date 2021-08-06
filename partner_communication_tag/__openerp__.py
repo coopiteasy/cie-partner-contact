@@ -9,11 +9,9 @@
     Let you add tags to a contact to manage your communication
     strategies.
     """,
-    "description": """
-    """,
-    "author": "Coop IT Easy, Rémy Taymans",
+    "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
-    "version": "9.0.1.0",
+    "version": "9.0.1.0.0",
     "website": "https://coopiteasy.be",
     "category": "Partner Management",
     "depends": [
