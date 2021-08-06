@@ -5,14 +5,10 @@
 
 {
     "name": "Partner Communication Bilingual Field",
-    "summary": """
-    Adds bilingual field to partner to  
-    """,
-    "description": """
-    """,
-    "author": "Coop IT Easy, Robin Keunen",
+    "summary": "Add bilingual field to partner",
+    "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
-    "version": "9.0.1.0",
+    "version": "9.0.1.0.0",
     "website": "https://coopiteasy.be",
     "category": "Partner Management",
     "depends": [
