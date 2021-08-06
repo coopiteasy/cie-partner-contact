@@ -6,11 +6,10 @@ from odoo import models, fields
 
 
 class PartnerCommunicationPressType(models.Model):
-    _name = 'res.partner.communication.press.type'
+    _name = "res.partner.communication.press.type"
     _description = "Partner Communication Press Type"
-    _order = 'name'
+    _order = "name"
 
     name = fields.Char("Name", required=True)
-    partner_ids = fields.Many2many('res.partner',
-                                   string="Partners")
+    partner_ids = fields.Many2many("res.partner", string="Partners")
     active = fields.Boolean("Active", default=True)
