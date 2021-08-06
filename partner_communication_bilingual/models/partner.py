@@ -8,6 +8,6 @@ from openerp import models, fields
 
 
 class Partner(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
-    is_bilingual = fields.Boolean(string='Bilingual', default=False)
+    is_bilingual = fields.Boolean(string="Bilingual", default=False)
