@@ -6,7 +6,8 @@ from odoo import models, fields
 
 
 class Partner(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
-    communication_tag_ids = fields.Many2many('res.partner.communication.tag',
-                                             string="Communication")
+    communication_tag_ids = fields.Many2many(
+        "res.partner.communication.tag", string="Communication"
+    )

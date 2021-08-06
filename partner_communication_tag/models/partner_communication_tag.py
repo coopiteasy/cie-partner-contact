@@ -6,11 +6,11 @@ from odoo import models, fields
 
 
 class PartnerCommunicationTag(models.Model):
-    _name = 'res.partner.communication.tag'
+    _name = "res.partner.communication.tag"
     _description = "Partner Communication Tag"
-    _order = 'name'
+    _order = "name"
 
     name = fields.Char("Name", required=True)
     description = fields.Text("Description")
-    partner_ids = fields.Many2many('res.partner', string="Partners")
+    partner_ids = fields.Many2many("res.partner", string="Partners")
     active = fields.Boolean("Active", default=True)
