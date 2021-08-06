@@ -42,8 +42,13 @@ Credits
 Authors
 ~~~~~~~
 
-* Coop IT Easy
+* Coop IT Easy SCRLfs
+
+Contributors
+~~~~~~~~~~~~
+
 * Robin Keunen
+* hugues de keyzer
 
 Maintainers
 ~~~~~~~~~~~
