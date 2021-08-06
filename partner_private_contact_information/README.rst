@@ -19,6 +19,7 @@ Partner Private Contact Information
 
 |badge1| |badge2| |badge3| 
 
+Add a VIP status and private address fields to contacts
 
 **Table of contents**
 
@@ -41,8 +42,13 @@ Credits
 Authors
 ~~~~~~~
 
-* Coop IT Easy
+* Coop IT Easy SCRLfs
+
+Contributors
+~~~~~~~~~~~~
+
 * Robin Keunen
+* hugues de keyzer
 
 Maintainers
 ~~~~~~~~~~~
