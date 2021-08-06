@@ -4,26 +4,22 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'Partner Private Contact Information',
-
-    'summary': """
+    "name": "Partner Private Contact Information",
+    "summary": """
     # todo
     """,
-    'description': """
+    "description": """
     """,
-
-    'author': 'Coop IT Easy, Robin Keunen',
-    'license': 'AGPL-3',
-    'version': '9.0.1.0',
-    'website': "https://coopiteasy.be",
-
-    'category': 'Partner Management',
-
-    'depends': [
-        'base',
+    "author": "Coop IT Easy, Robin Keunen",
+    "license": "AGPL-3",
+    "version": "9.0.1.0",
+    "website": "https://coopiteasy.be",
+    "category": "Partner Management",
+    "depends": [
+        "base",
     ],
-    'data': [
-        'security/user_groups.xml',
-        'views/partner.xml',
-    ]
+    "data": [
+        "security/user_groups.xml",
+        "views/partner.xml",
+    ],
 }
