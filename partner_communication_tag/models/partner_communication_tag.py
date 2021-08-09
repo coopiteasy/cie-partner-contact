@@ -10,7 +10,7 @@ class PartnerCommunicationTag(models.Model):
     _description = "Partner Communication Tag"
     _order = "name"
 
-    name = fields.Char("Name", required=True)
-    description = fields.Text("Description")
+    name = fields.Char("Name", required=True, translate=True)
+    description = fields.Text("Description", translate=True)
     partner_ids = fields.Many2many("res.partner", string="Partners")
     active = fields.Boolean("Active", default=True)
