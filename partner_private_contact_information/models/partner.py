@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
-
 # Copyright 2018 Robin Keunen <robin@keunen.net>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 
-from openerp import models, fields
+from odoo import models, fields
 
 
 class Partner(models.Model):
@@ -17,10 +15,10 @@ class Partner(models.Model):
     vip_zip = fields.Char("Private Zip", size=24, change_default=True)
     vip_city = fields.Char("Private City")
     vip_state_id = fields.Many2one(
-        "res.country.state", "State", ondelete="restrict"
+        "res.country.state", "Private State", ondelete="restrict"
     )
     vip_country_id = fields.Many2one(
-        "res.country", "Country", ondelete="restrict"
+        "res.country", "Private Country", ondelete="restrict"
     )
     vip_email = fields.Char("Private Email")
     vip_phone = fields.Char("Private Phone")
