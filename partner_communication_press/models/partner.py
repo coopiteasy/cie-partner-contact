@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 
-from openerp import api, models, fields
+from openerp import api, fields, models
 
 
 class Partner(models.Model):
@@ -17,11 +17,9 @@ class Partner(models.Model):
 
     @api.multi
     def write(self, vals):
-        for rec in self:
-            if "communication_press" in vals:
-                if not vals["communication_press"]:
-                    # Empty all communication_press_type
-                    vals["communication_press_type_ids"] = [(5,)]
+        if "communication_press" in vals and not vals["communication_press"]:
+            # Empty all communication_press_type
+            vals["communication_press_type_ids"] = [(5,)]
         return super(Partner, self).write(vals)
 
 
