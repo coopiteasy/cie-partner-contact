@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2018 Rémy Taymans <remytaymans@gmail.com>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -10,9 +10,9 @@
         <field name="model">res.partner.communication.tag</field>
         <field name="arch" type="xml">
             <tree string="Communication Tags" editable="bottom">
-                <field name="name"/>
-                <field name="description"/>
-                <field name="active"/>
+                <field name="name" />
+                <field name="description" />
+                <field name="active" />
             </tree>
         </field>
     </record>
@@ -23,11 +23,12 @@
         <field name="model">res.partner.communication.tag</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name"/>
+                <field name="name" />
                 <filter
                     name="archived"
                     string="Archived"
-                    domain="[('active', '=', False)]"/>
+                    domain="[('active', '=', False)]"
+                />
             </search>
         </field>
     </record>
@@ -37,12 +38,14 @@
         id="action_partner_communication_tag"
         name="Communication Tags Action"
         res_model="res.partner.communication.tag"
-        view_mode="tree" />
+        view_mode="tree"
+    />
 
     <!-- Menu item to open communication tag list -->
     <menuitem
         id="menu_partner_communication_tag"
         name="Communication Tags"
         parent="contacts.res_partner_menu_config"
-        action="action_partner_communication_tag" />
+        action="action_partner_communication_tag"
+    />
 </odoo>

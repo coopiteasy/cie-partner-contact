@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
      Copyright 2018 Rémy Taymans <remytaymans@gmail.com>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -11,7 +11,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='email']/../.." position="after">
                 <group>
-                    <field name="communication_tag_ids" widget="many2many_checkboxes"/>
+                    <field name="communication_tag_ids" widget="many2many_checkboxes" />
                 </group>
             </xpath>
         </field>
@@ -20,10 +20,10 @@
     <!-- Add Communication Tags to the search bar -->
     <record id="view_res_partner_filter" model="ir.ui.view">
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
         <field name="arch" type="xml">
             <xpath expr="." position="inside">
-                <field name="communication_tag_ids"/>
+                <field name="communication_tag_ids" />
             </xpath>
         </field>
     </record>
