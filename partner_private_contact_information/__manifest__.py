@@ -6,7 +6,7 @@
     "summary": "Add a VIP status and private address fields to contacts",
     "author": "Coop IT Easy SC",
     "license": "AGPL-3",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "website": "https://github.com/coopiteasy/cie-partner-contact",
     "category": "Partner Management",
     "depends": [
