@@ -4,7 +4,7 @@
 {
     "name": "Partner Communication Bilingual Field",
     "summary": "Add bilingual field to partner",
-    "author": "Coop IT Easy SCRLfs",
+    "author": "Coop IT Easy SC",
     "license": "AGPL-3",
     "version": "12.0.1.0.0",
     "website": "https://github.com/coopiteasy/cie-partner-contact",
