@@ -10,7 +10,7 @@
     "author": "Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "version": "12.0.1.0.0",
-    "website": "https://coopiteasy.be",
+    "website": "https://github.com/coopiteasy/cie-partner-contact",
     "category": "Partner Management",
     "depends": [
         "base",
