@@ -14,6 +14,7 @@
     "depends": [
         "base",
         "mail",
+        "sms",
     ],
     "data": [
         "views/res_partner_forms.xml",
