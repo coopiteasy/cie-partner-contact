@@ -89,6 +89,26 @@
         </field>
     </record>
 
+    <record id="partner_form_send_sms_form_view" model="ir.ui.view">
+        <field name="name">res.partner.form.send.sms</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sms.partner_form_send_sms_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='phone']" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//field[@name='phone']/.." position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//label[@for='mobile']" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//field[@name='mobile']/.." position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+        </field>
+    </record>
+
     <record id="view_partner_short_form" model="ir.ui.view">
         <field name="name">res.partner.form</field>
         <field name="model">res.partner</field>
