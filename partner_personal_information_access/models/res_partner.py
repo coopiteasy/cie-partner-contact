@@ -20,6 +20,7 @@ class ResPartner(models.Model):
                 "state_id",
                 "zip",
                 "country_id",
+                "birthdate_date",
             ]
         else:
             fields = []

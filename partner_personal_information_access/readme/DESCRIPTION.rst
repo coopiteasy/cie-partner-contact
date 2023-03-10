@@ -4,6 +4,7 @@ This module restricts access to fields
 * phone
 * mobile
 * address
+* birthdate_date
 
 to users of group "Access to Private Addresses".
 

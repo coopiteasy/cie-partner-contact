@@ -182,5 +182,17 @@
         </field>
     </record>
 
+    <record id="view_personal_information_birthdate_date" model="ir.ui.view">
+        <field name="name">Birthdate Date field</field>
+        <field name="model">res.partner</field>
+        <field
+            name="inherit_id"
+            ref="partner_contact_birthdate.view_personal_information_birthdate_date"
+        />
+        <field name="arch" type="xml">
+            <field name='birthdate_date' position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </field>
+        </field>
+    </record>
 </odoo>
-<!-- todo look in all forms and tree views of all installed modules          -->
