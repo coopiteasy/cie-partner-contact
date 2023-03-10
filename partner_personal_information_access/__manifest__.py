@@ -14,6 +14,7 @@
     "depends": [
         "base",
         "mail",
+        "partner_contact_birthdate",
         "sms",
     ],
     "data": [
