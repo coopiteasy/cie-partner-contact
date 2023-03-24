@@ -26,6 +26,13 @@ Add a VIP status and private address fields to contacts
 .. contents::
    :local:
 
+Known issues / Roadmap
+======================
+
+Do not port to v16 and rather migrate to standard "private addresses".
+
+Cf. group "Access to private addresses".
+
 Bug Tracker
 ===========
 
