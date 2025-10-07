@@ -17,7 +17,11 @@
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[partner_personal_information_access](partner_personal_information_access/) | 16.0.1.0.0 |  | This module restricts access to personal fields to users of group 'Access to Private Addresses'.
 
 [//]: # (end addons)
 
