@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Coop IT Easy SC
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <!-- main sheet -->
+            <xpath expr="//span[@name='address_name']" position="inside">
+                <field name="user_ids" invisible="1" />
+            </xpath>
+            <xpath expr="//span[@name='address_name']/b" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_address_format')]" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <!-- Needed in kanban context -->
+            <xpath expr="//div[hasclass('o_address_format')]" position="after">
+                <field
+                    name="street"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+                <field
+                    name="street2"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+                <field
+                    name="city"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+                <field
+                    name="state_id"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+                <field
+                    name="zip"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+                <field
+                    name="country_id"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+            </xpath>
+
+            <!-- contact kanban -->
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]//field[@name='email']/.."
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]//field[@name='country_id']"
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]//field[@name='country_id']"
+                position="after"
+            >
+                <field
+                    name="country_id"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+            </xpath>
+            <xpath
+                expr="//div[hasclass('oe_kanban_details')]//field[@name='city']"
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+
+            <!-- contact popup from kanban -->
+            <xpath
+                expr="//notebook/page/field/form//label[@for='street']/.."
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath
+                expr="//notebook/page/field/form//field[@name='email']"
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath
+                expr="//notebook/page/field/form//field[@name='mobile']"
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath
+                expr="//notebook/page/field/form//field[@name='phone']"
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_view_form_inherit_mail" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.mail</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="mail.res_partner_view_form_inherit_mail" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='email']" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//label[@for='email']" position="after">
+                <field
+                    name="email"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='email'][@widget='email']/.."
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.sms</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sms.res_partner_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='phone']" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//label[@for='mobile']" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//label[@for='phone']" position="after">
+                <field
+                    name="phone"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+            </xpath>
+            <xpath expr="//label[@for='mobile']" position="after">
+                <field
+                    name="mobile"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='phone'][@widget='phone']/.."
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='mobile'][@widget='phone']/.."
+                position="attributes"
+            >
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_simple_form" model="ir.ui.view">
+        <field name="name">res.partner.simplified.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
+        <field name="arch" type="xml">
+            <field name="email" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </field>
+            <field name="phone" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </field>
+            <field name="mobile" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </field>
+        </field>
+    </record>
+
+
+    <record id="view_partner_address_form" model="ir.ui.view">
+        <field name="name">res.partner.form.address</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_address_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='street']" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_address_format')]" position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_form_inherit_birthdate" model="ir.ui.view">
+        <field name="name">Birthday Date field</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_contact_birthdate.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name='birthdate_date' position="attributes">
+                <attribute name="groups">base.group_private_addresses</attribute>
+            </field>
+            <field name='birthdate_date' position="after">
+                <field
+                    name="birthdate_date"
+                    invisible="1"
+                    groups="!base.group_private_addresses"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
