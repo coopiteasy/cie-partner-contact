@@ -25,7 +25,11 @@
                     name='beneficiary'
                     string="Beneficiary"
                     invisible="social_type != 'beneficiary'"
-                />
+                >
+                    <group>
+                        <field name="beneficiary_file_creation_date" widget="date" />
+                    </group>
+                </page>
                 <page
                     name='volunteer'
                     string="Volunteer"
