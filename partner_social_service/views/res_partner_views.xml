@@ -13,7 +13,11 @@
                     name='beneficiary'
                     string="Beneficiary"
                     invisible="contact_type != 'beneficiary'"
-                />
+                >
+                    <group>
+                        <field name="creation_date" widget="date" />
+                    </group>
+                </page>
                 <page
                     name='volunteer'
                     string="Volunteer"

@@ -18,3 +18,9 @@ class ResPartner(models.Model):
         ],
         default="beneficiary",
     )
+
+    creation_date = fields.Date(
+        string="File Creation Date",
+        required=True,
+        default=fields.Date.context_today,
+    )
