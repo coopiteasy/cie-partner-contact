@@ -16,23 +16,36 @@
                 >
                     <group>
                         <field name="creation_date" widget="date" />
+                        <field name="beneficiary_properties" widget="properties" />
                     </group>
                 </page>
                 <page
                     name='volunteer'
                     string="Volunteer"
                     invisible="contact_type != 'volunteer'"
-                />
+                >
+                    <group>
+                        <field name="volunteer_properties" widget="properties" />
+                    </group>
+                </page>
                 <page
                     name='partner'
                     string="Partner"
                     invisible="contact_type != 'partner'"
-                />
+                >
+                    <group>
+                        <field name="partner_properties" widget="properties" />
+                    </group>
+                </page>
                 <page
                     name='benefactor'
                     string="Benefactor"
                     invisible="contact_type != 'benefactor'"
-                />
+                >
+                    <group>
+                        <field name="benefactor_properties" widget="properties" />
+                    </group>
+                </page>
             </xpath>
             <xpath expr="//page[@name='contact_addresses']" position="attributes">
                 <attribute name="autofocus" />

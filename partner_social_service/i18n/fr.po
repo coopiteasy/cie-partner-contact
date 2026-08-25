@@ -23,10 +23,29 @@ msgid "Benefactor"
 msgstr "Bienfaiteur"
 
 #. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__benefactor_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__benefactor_properties
+#, fuzzy
+msgid "Benefactor Properties"
+msgstr "Propriétés du bienfaiteur"
+
+#. module: partner_social_service
 #: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__beneficiary
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Beneficiary"
 msgstr "Bénéficiaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__beneficiary_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__beneficiary_properties
+#, fuzzy
+msgid "Beneficiary Properties"
+msgstr "Propriétés du bénéficiaire"
+
+#. module: partner_social_service
+#: model:ir.model,name:partner_social_service.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
 
 #. module: partner_social_service
 #: model:ir.model,name:partner_social_service.model_res_partner
@@ -57,7 +76,50 @@ msgid "Partner"
 msgstr "Partenaire"
 
 #. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__partner_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__partner_properties
+msgid "Partner Properties"
+msgstr "Propriétés du partenaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__properties_company_id
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__properties_company_id
+msgid "Properties Company"
+msgstr "Propriétés de la société"
+
+#. module: partner_social_service
 #: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__volunteer
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Volunteer"
+msgstr "Bénévole"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__volunteer_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__volunteer_properties
+#, fuzzy
+msgid "Volunteer Properties"
+msgstr "Propriété du bénévole"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__benefactor_properties_definition
+#, fuzzy
+msgid "benefactor"
+msgstr "Bienfaiteur"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__beneficiary_properties_definition
+#, fuzzy
+msgid "beneficiary"
+msgstr "Bénéficiaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__partner_properties_definition
+#, fuzzy
+msgid "partner"
+msgstr "Partenaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__volunteer_properties_definition
+#, fuzzy
+msgid "volunteer"
 msgstr "Bénévole"
