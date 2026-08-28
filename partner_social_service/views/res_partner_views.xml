@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_address_type" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.base</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="contact_type" />
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page
+                    name='beneficiary'
+                    string="Beneficiary"
+                    invisible="contact_type != 'beneficiary'"
+                >
+                    <group>
+                        <field name="creation_date" widget="date" />
+                        <field name="beneficiary_properties" widget="properties" />
+                    </group>
+                </page>
+                <page
+                    name='volunteer'
+                    string="Volunteer"
+                    invisible="contact_type != 'volunteer'"
+                >
+                    <group>
+                        <field name="volunteer_properties" widget="properties" />
+                    </group>
+                </page>
+                <page
+                    name='partner'
+                    string="Partner"
+                    invisible="contact_type != 'partner'"
+                >
+                    <group>
+                        <field name="partner_properties" widget="properties" />
+                    </group>
+                </page>
+                <page
+                    name='benefactor'
+                    string="Benefactor"
+                    invisible="contact_type != 'benefactor'"
+                >
+                    <group>
+                        <field name="benefactor_properties" widget="properties" />
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="autofocus" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
