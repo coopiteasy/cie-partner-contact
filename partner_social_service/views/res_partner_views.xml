@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.social.service</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="social_type" />
+                <field
+                    name="is_social_benefactor"
+                    invisible="social_type != 'accompagner'"
+                />
+                <field
+                    name="is_social_employee"
+                    invisible="social_type != 'accompagner'"
+                />
+                <field
+                    name="is_social_volunteer"
+                    invisible="social_type != 'accompagner'"
+                />
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page
+                    name='beneficiary'
+                    string="Beneficiary"
+                    invisible="social_type != 'beneficiary'"
+                />
+                <page
+                    name='volunteer'
+                    string="Volunteer"
+                    invisible="social_type != 'accompagner' or not is_social_volunteer"
+                />
+                <page
+                    name='partner'
+                    string="Partner"
+                    invisible="social_type != 'partner'"
+                />
+                <page
+                    name='benefactor'
+                    string="Benefactor"
+                    invisible="social_type != 'accompagner' or not is_social_benefactor"
+                />
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="autofocus" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
