@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_address_type" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.base</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="contact_type" />
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page
+                    name='beneficiary'
+                    string="Beneficiary"
+                    invisible="contact_type != 'beneficiary'"
+                />
+                <page
+                    name='volunteer'
+                    string="Volunteer"
+                    invisible="contact_type != 'volunteer'"
+                />
+                <page
+                    name='partner'
+                    string="Partner"
+                    invisible="contact_type != 'partner'"
+                />
+                <page
+                    name='benefactor'
+                    string="Benefactor"
+                    invisible="contact_type != 'benefactor'"
+                />
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="autofocus" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
