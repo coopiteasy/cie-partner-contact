@@ -8,7 +8,9 @@ from odoo import fields, models
 class ResCompany(models.Model):
     _inherit = "res.company"
 
-    beneficiary_properties_definition = fields.PropertiesDefinition("beneficiary")
-    volunteer_properties_definition = fields.PropertiesDefinition("volunteer")
-    partner_properties_definition = fields.PropertiesDefinition("partner")
-    benefactor_properties_definition = fields.PropertiesDefinition("benefactor")
+    beneficiary_properties_definition = fields.PropertiesDefinition(
+        "social_beneficiary"
+    )
+    volunteer_properties_definition = fields.PropertiesDefinition("social_volunteer")
+    partner_properties_definition = fields.PropertiesDefinition("social_partner")
+    benefactor_properties_definition = fields.PropertiesDefinition("social_benefactor")

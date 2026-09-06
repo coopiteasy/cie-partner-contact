@@ -10,15 +10,30 @@ from odoo.tools.sql import SQL
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    contact_type = fields.Selection(
+    social_type = fields.Selection(
         [
-            ("beneficiary", "Beneficiary"),
-            ("volunteer", "Volunteer"),
-            ("partner", "Partner"),
-            ("benefactor", "Benefactor"),
-            ("other", "Other"),
+            ("social_beneficiary", "Beneficiary"),
+            ("social_volunteer", "Volunteer"),
+            ("social_partner", "Partner"),
+            ("social_benefactor", "Benefactor"),
+            ("social_other", "Other"),
         ],
-        default="beneficiary",
+        default="social_beneficiary",
+    )
+
+    social_beneficiary_ids = fields.Many2many(
+        "res.partner",
+        "beneficiary_partner_rel",
+        "social_partner",
+        "social_beneficiary",
+        string="Beneficiaries",
+    )
+    social_partner_ids = fields.Many2many(
+        "res.partner",
+        "beneficiary_partner_rel",
+        "social_beneficiary",
+        "social_partner",
+        string="Partners",
     )
 
     creation_date = fields.Date(
@@ -77,3 +92,16 @@ class ResPartner(models.Model):
                 env_company=self.env.company.id,
             )
         return super()._field_to_sql(alias, fname, query, flush)
+
+    # When a partner is set to the type partner he's automatically added to the
+    # group_portal_social_partner group, and removed from it when set to another type
+    def write(self, vals):
+        res = super().write(vals)
+        if "social_type" in vals:
+            group = self.env.ref("partner_social_service.group_portal_social_partner")
+            for partner in self:
+                if partner.social_type == "social_partner":
+                    partner.user_ids.sudo().write({"groups_id": [(4, group.id)]})
+                else:
+                    partner.user_ids.sudo().write({"groups_id": [(3, group.id)]})
+        return res

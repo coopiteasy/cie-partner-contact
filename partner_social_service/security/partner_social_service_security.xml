@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_portal_social_partner" model="res.groups">
+        <field name="name">Partner Portal Group</field>
+        <field name="category_id" ref="base.module_category_website" />
+        <field name="comment">Group to restrict access to pages only to partners
+            with the social_type social_partner.</field>
+    </record>
+</odoo>

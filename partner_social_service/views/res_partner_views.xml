@@ -6,41 +6,43 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <xpath expr="//span[@name='address_name']" position="before">
-                <field name="contact_type" />
+                <field name="social_type" />
             </xpath>
             <xpath expr="//page[@name='contact_addresses']" position="before">
                 <page
-                    name='beneficiary'
+                    name='social_beneficiary'
                     string="Beneficiary"
-                    invisible="contact_type != 'beneficiary'"
+                    invisible="social_type != 'social_beneficiary'"
                 >
                     <group>
                         <field name="creation_date" widget="date" />
+                        <field name="social_partner_ids" widget="many2many_tags" />
                         <field name="beneficiary_properties" widget="properties" />
                     </group>
                 </page>
                 <page
-                    name='volunteer'
+                    name='social_volunteer'
                     string="Volunteer"
-                    invisible="contact_type != 'volunteer'"
+                    invisible="social_type != 'social_volunteer'"
                 >
                     <group>
                         <field name="volunteer_properties" widget="properties" />
                     </group>
                 </page>
                 <page
-                    name='partner'
+                    name='social_partner'
                     string="Partner"
-                    invisible="contact_type != 'partner'"
+                    invisible="social_type != 'social_partner'"
                 >
                     <group>
+                        <field name="social_beneficiary_ids" widget="many2many_tags" />
                         <field name="partner_properties" widget="properties" />
                     </group>
                 </page>
                 <page
-                    name='benefactor'
+                    name='social_benefactor'
                     string="Benefactor"
-                    invisible="contact_type != 'benefactor'"
+                    invisible="social_type != 'social_benefactor'"
                 >
                     <group>
                         <field name="benefactor_properties" widget="properties" />
