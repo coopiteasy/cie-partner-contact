@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+from odoo import fields, models
+
+
+class ResCompany(models.Model):
+    _inherit = "res.company"
+
+    beneficiary_properties_definition = fields.PropertiesDefinition(
+        "social_beneficiary"
+    )
+    volunteer_properties_definition = fields.PropertiesDefinition("social_volunteer")
+    partner_properties_definition = fields.PropertiesDefinition("social_partner")
+    benefactor_properties_definition = fields.PropertiesDefinition("social_benefactor")

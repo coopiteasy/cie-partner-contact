@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_address_type" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.base</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="social_type" />
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page
+                    name='social_beneficiary'
+                    string="Beneficiary"
+                    invisible="social_type != 'social_beneficiary'"
+                >
+                    <group>
+                        <field name="creation_date" widget="date" />
+                        <field name="social_partner_ids" widget="many2many_tags" />
+                        <field name="beneficiary_properties" widget="properties" />
+                    </group>
+                </page>
+                <page
+                    name='social_volunteer'
+                    string="Volunteer"
+                    invisible="social_type != 'social_volunteer'"
+                >
+                    <group>
+                        <field name="volunteer_properties" widget="properties" />
+                    </group>
+                </page>
+                <page
+                    name='social_partner'
+                    string="Partner"
+                    invisible="social_type != 'social_partner'"
+                >
+                    <group>
+                        <field name="social_beneficiary_ids" widget="many2many_tags" />
+                        <field name="partner_properties" widget="properties" />
+                    </group>
+                </page>
+                <page
+                    name='social_benefactor'
+                    string="Benefactor"
+                    invisible="social_type != 'social_benefactor'"
+                >
+                    <group>
+                        <field name="benefactor_properties" widget="properties" />
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="autofocus" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

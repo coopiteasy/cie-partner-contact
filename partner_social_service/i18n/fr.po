@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_social_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-24 15:48+0000\n"
+"PO-Revision-Date: 2026-08-24 15:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_benefactor
+#: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
+msgid "Benefactor"
+msgstr "Bienfaiteur"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__benefactor_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__benefactor_properties
+msgid "Benefactor Properties"
+msgstr "Propriétés du bienfaiteur"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__social_beneficiary_ids
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__social_beneficiary_ids
+msgid "Beneficiaries"
+msgstr "Bénéficiaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_beneficiary
+#: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
+msgid "Beneficiary"
+msgstr "Bénéficiaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__beneficiary_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__beneficiary_properties
+msgid "Beneficiary Properties"
+msgstr "Propriétés du bénéficiaire"
+
+#. module: partner_social_service
+#: model:ir.model,name:partner_social_service.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: partner_social_service
+#: model:ir.model,name:partner_social_service.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__creation_date
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__creation_date
+msgid "File Creation Date"
+msgstr "Date de début du dossier"
+
+#. module: partner_social_service
+#: model:res.groups,comment:partner_social_service.group_portal_social_partner
+msgid ""
+"Group to restrict access to pages only to partners\n"
+"            with the social_type social_partner."
+msgstr ""
+"Ce groupe peut être utilisé pour restreindre l'accès\n"
+"uniquement aux contacts de type partenaires"
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_other
+msgid "Other"
+msgstr "Autre"
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_partner
+#: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: partner_social_service
+#: model:res.groups,name:partner_social_service.group_portal_social_partner
+msgid "Partner Portal Group"
+msgstr "Propriétés du partenaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__partner_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__partner_properties
+msgid "Partner Properties"
+msgstr "Propriétés du partenaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__social_partner_ids
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__social_partner_ids
+msgid "Partners"
+msgstr "Partenaire"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__properties_company_id
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__properties_company_id
+msgid "Properties Company"
+msgstr "Propriétés de la société"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__social_type
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__social_type
+msgid "Social Type"
+msgstr "Type de Contact"
+
+#. module: partner_social_service
+#: model:ir.model,name:partner_social_service.model_res_users
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_volunteer
+#: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
+msgid "Volunteer"
+msgstr "Bénévole"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__volunteer_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__volunteer_properties
+msgid "Volunteer Properties"
+msgstr "Propriété du bénévole"
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__benefactor_properties_definition
+#, fuzzy
+msgid "social_benefactor"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__beneficiary_properties_definition
+#, fuzzy
+msgid "social_beneficiary"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__partner_properties_definition
+#, fuzzy
+msgid "social_partner"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__volunteer_properties_definition
+#, fuzzy
+msgid "social_volunteer"
+msgstr ""
