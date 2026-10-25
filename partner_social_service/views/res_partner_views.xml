@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 <odoo>
     <record id="view_partner_form" model="ir.ui.view">
         <field name="name">res.partner.form.social.service</field>
@@ -31,22 +36,46 @@
                     name='beneficiary'
                     string="Beneficiary"
                     invisible="social_type != 'beneficiary'"
-                />
+                >
+                    <group>
+                        <field name="social_partner_ids" widget="many2many_tags" />
+                        <field
+                            name="social_beneficiary_properties"
+                            widget="properties"
+                        />
+                    </group>
+                </page>
                 <page
                     name='volunteer'
                     string="Volunteer"
                     invisible="social_type != 'accompagner' or not is_social_volunteer"
-                />
+                >
+                    <group>
+                        <field name="social_volunteer_properties" widget="properties" />
+                    </group>
+                </page>
                 <page
                     name='partner'
                     string="Partner"
                     invisible="social_type != 'partner'"
-                />
+                >
+                    <group>
+                        <field name="social_beneficiary_ids" widget="many2many_tags" />
+                        <field name="social_partner_properties" widget="properties" />
+                    </group>
+                </page>
                 <page
                     name='benefactor'
                     string="Benefactor"
                     invisible="social_type != 'accompagner' or not is_social_benefactor"
-                />
+                >
+                    <group>
+                        <field
+                            name="social_benefactor_properties"
+                            widget="properties"
+                        />
+                    </group>
+                </page>
             </xpath>
             <xpath expr="//page[@name='contact_addresses']" position="attributes">
                 <attribute name="autofocus" />

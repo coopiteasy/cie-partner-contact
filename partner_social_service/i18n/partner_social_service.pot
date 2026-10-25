@@ -20,9 +20,26 @@ msgid "Benefactor"
 msgstr ""
 
 #. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__benefactor_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__benefactor_properties
+msgid "Benefactor Properties"
+msgstr ""
+
+#. module: partner_social_service
 #: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__beneficiary
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Beneficiary"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__beneficiary_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__beneficiary_properties
+msgid "Beneficiary Properties"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model,name:partner_social_service.model_res_company
+msgid "Companies"
 msgstr ""
 
 #. module: partner_social_service
@@ -54,7 +71,45 @@ msgid "Partner"
 msgstr ""
 
 #. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__partner_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__partner_properties
+msgid "Partner Properties"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__properties_company_id
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__properties_company_id
+msgid "Properties Company"
+msgstr ""
+
+#. module: partner_social_service
 #: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__volunteer
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Volunteer"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__volunteer_properties
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__volunteer_properties
+msgid "Volunteer Properties"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__benefactor_properties_definition
+msgid "benefactor"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__beneficiary_properties_definition
+msgid "beneficiary"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__partner_properties_definition
+msgid "partner"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_company__volunteer_properties_definition
+msgid "volunteer"
 msgstr ""
