@@ -13,9 +13,12 @@
     "license": "AGPL-3",
     "depends": [
         "base",
+        "contacts",
     ],
     "data": [
-        "views/res_partner_views.xml",
+        "security/ir.model.access.csv",
         "security/partner_social_service_security.xml",
+        "views/partner_social_configuration_views.xml",
+        "views/res_partner_views.xml",
     ],
 }

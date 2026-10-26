@@ -46,6 +46,80 @@ class ResPartner(models.Model):
         default=fields.Date.context_today,
     )
 
+    # Beneficiary
+    social_beneficiary_orientation_id = fields.Many2one(
+        "partner.social.orientation",
+        string="Orientation",
+    )
+    social_beneficiary_gdpr = fields.Boolean(string="GDPR")
+    social_beneficiary_spoken_language = fields.Char(string="Spoken Language")
+    social_beneficiary_residence_permit_title_id = fields.Many2one(
+        "partner.social.residence.permit.title",
+        string="Residence Permit Title",
+    )
+    social_beneficiary_contact_person_name = fields.Char(string="Contact Person Name")
+    social_beneficiary_contact_person_mobile = fields.Char(
+        string="Contact Person Mobile"
+    )
+    social_beneficiary_marital_status_id = fields.Many2one(
+        "partner.social.marital.status",
+        string="Marital Status",
+    )
+    social_beneficiary_children_count = fields.Integer(string="Children Count")
+    social_beneficiary_household_type_id = fields.Many2one(
+        "partner.social.household.type",
+        string="Household Type",
+    )
+    social_beneficiary_resource_id = fields.Many2one(
+        "partner.social.resource",
+        string="Resource",
+    )
+    social_beneficiary_belgium_since_date = fields.Date(string="In Belgium Since")
+    social_beneficiary_residence_right_id = fields.Many2one(
+        "partner.social.residence.right",
+        string="Residence Right",
+    )
+
+    # Volunteer
+    social_volunteer_professional_status_id = fields.Many2one(
+        "partner.social.volunteer.professional.status",
+        string="Professional Status",
+    )
+    social_volunteer_personal_email = fields.Char(string="Personal Email")
+    social_volunteer_nationality_country_id = fields.Many2one(
+        "res.country",
+        string="Nationality",
+    )
+    social_volunteer_contact_method_id = fields.Many2one(
+        "partner.social.volunteer.contact.method",
+        string="Contact Method",
+    )
+    social_volunteer_course_ids = fields.One2many(
+        "partner.social.volunteer.course",
+        "partner_id",
+        string="Volunteer Course",
+    )
+    social_volunteer_type_ids = fields.Many2many(
+        "partner.social.volunteer.type",
+        "partner_social_volunteer_type_rel",
+        "partner_id",
+        "volunteer_type_id",
+        string="Volunteer Types",
+    )
+    social_volunteer_motivation_ids = fields.Many2many(
+        "partner.social.volunteer.motivation",
+        "partner_social_volunteer_motivation_rel",
+        "partner_id",
+        "motivation_id",
+        string="Motivations",
+    )
+
+    # Partner
+    social_partner_structure_id = fields.Many2one(
+        "partner.social.structure",
+        string="Structure",
+    )
+
     # The logic on properties used here follows the one done in
     # oca/partner-contact/partner_property
     # The properties are defined on the company

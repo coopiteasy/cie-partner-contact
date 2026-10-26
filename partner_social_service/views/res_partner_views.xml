@@ -45,6 +45,20 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             widget="properties"
                         />
                     </group>
+                    <group string="Beneficiary Information">
+                        <field name="social_beneficiary_orientation_id" />
+                        <field name="social_beneficiary_gdpr" />
+                        <field name="social_beneficiary_spoken_language" />
+                        <field name="social_beneficiary_residence_permit_title_id" />
+                        <field name="social_beneficiary_contact_person_name" />
+                        <field name="social_beneficiary_contact_person_mobile" />
+                        <field name="social_beneficiary_marital_status_id" />
+                        <field name="social_beneficiary_children_count" />
+                        <field name="social_beneficiary_household_type_id" />
+                        <field name="social_beneficiary_resource_id" />
+                        <field name="social_beneficiary_belgium_since_date" />
+                        <field name="social_beneficiary_residence_right_id" />
+                    </group>
                 </page>
                 <page
                     name='volunteer'
@@ -53,6 +67,33 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 >
                     <group>
                         <field name="social_volunteer_properties" widget="properties" />
+                    </group>
+                    <group string="Volunteer Information">
+                        <field name="social_volunteer_professional_status_id" />
+                        <field name="social_volunteer_personal_email" />
+                        <field name="social_volunteer_nationality_country_id" />
+                        <field name="social_volunteer_contact_method_id" />
+                        <field
+                            name="social_volunteer_type_ids"
+                            widget="many2many_tags"
+                        />
+                        <field
+                            name="social_volunteer_motivation_ids"
+                            widget="many2many_tags"
+                        />
+                    </group>
+                    <group string="Volunteer Course">
+                        <field
+                            name="social_volunteer_course_ids"
+                            colspan="2"
+                            nolabel="1"
+                        >
+                            <list editable="bottom">
+                                <field name="date" />
+                                <field name="volunteer_type_id" />
+                                <field name="reason" />
+                            </list>
+                        </field>
                     </group>
                 </page>
                 <page
@@ -63,6 +104,9 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     <group>
                         <field name="social_beneficiary_ids" widget="many2many_tags" />
                         <field name="social_partner_properties" widget="properties" />
+                    </group>
+                    <group string="Partner Information">
+                        <field name="social_partner_structure_id" />
                     </group>
                 </page>
                 <page
