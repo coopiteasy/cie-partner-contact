@@ -40,6 +40,12 @@ msgid "Contact Type"
 msgstr "Type de Contact"
 
 #. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__creation_date
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__creation_date
+msgid "File Creation Date"
+msgstr "Date de début du dossier"
+
+#. module: partner_social_service
 #: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__other
 msgid "Other"
 msgstr "Autre"

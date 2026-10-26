@@ -20,6 +20,12 @@
                     invisible="social_type != 'accompagner'"
                 />
             </xpath>
+            <xpath
+                expr="//page[@name='sales_purchases']//group[@name='misc']"
+                position="inside"
+            >
+                <field name="social_file_creation_date" widget="date" />
+            </xpath>
             <xpath expr="//page[@name='contact_addresses']" position="before">
                 <page
                     name='beneficiary'
