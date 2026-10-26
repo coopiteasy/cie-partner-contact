@@ -13,9 +13,15 @@ class ResPartner(models.Model):
             ("accompagner", "Accompagner"),
             ("beneficiary", "Beneficiary"),
             ("partner", "Partner"),
+            ("other", "Other"),
         ],
         default="beneficiary",
     )
-
     is_social_benefactor = fields.Boolean("Benefactor")
     is_social_volunteer = fields.Boolean("Volunteer")
+
+    social_file_creation_date = fields.Date(
+        string="File Creation Date",
+        required=True,
+        default=fields.Date.context_today,
+    )
