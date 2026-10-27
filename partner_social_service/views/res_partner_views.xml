@@ -36,6 +36,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     name='beneficiary'
                     string="Beneficiary"
                     invisible="social_type != 'beneficiary'"
+                    groups="partner_social_service.group_access_social_beneficiary"
                 >
                     <group>
                         <field name="social_partner_ids" widget="many2many_tags" />

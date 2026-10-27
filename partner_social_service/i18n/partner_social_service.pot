@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: partner_social_service
-#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__benefactor
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_benefactor
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Benefactor"
 msgstr ""
@@ -26,7 +26,13 @@ msgid "Benefactor Properties"
 msgstr ""
 
 #. module: partner_social_service
-#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__beneficiary
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__social_beneficiary_ids
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__social_beneficiary_ids
+msgid "Beneficiaries"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_beneficiary
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Beneficiary"
 msgstr ""
@@ -48,26 +54,32 @@ msgid "Contact"
 msgstr ""
 
 #. module: partner_social_service
-#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__contact_type
-#: model:ir.model.fields,field_description:partner_social_service.field_res_users__contact_type
-msgid "Contact Type"
-msgstr ""
-
-#. module: partner_social_service
 #: model:ir.model.fields,field_description:partner_social_service.field_res_partner__creation_date
 #: model:ir.model.fields,field_description:partner_social_service.field_res_users__creation_date
 msgid "File Creation Date"
 msgstr ""
 
 #. module: partner_social_service
-#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__other
+#: model:res.groups,comment:partner_social_service.group_portal_social_partner
+msgid ""
+"Group to restrict access to pages only to partners\n"
+"            with the social_type social_partner."
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_other
 msgid "Other"
 msgstr ""
 
 #. module: partner_social_service
-#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__partner
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_partner
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Partner"
+msgstr ""
+
+#. module: partner_social_service
+#: model:res.groups,name:partner_social_service.group_portal_social_partner
+msgid "Partner Portal Group"
 msgstr ""
 
 #. module: partner_social_service
@@ -77,13 +89,30 @@ msgid "Partner Properties"
 msgstr ""
 
 #. module: partner_social_service
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__social_partner_ids
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__social_partner_ids
+msgid "Partners"
+msgstr ""
+
+#. module: partner_social_service
 #: model:ir.model.fields,field_description:partner_social_service.field_res_partner__properties_company_id
 #: model:ir.model.fields,field_description:partner_social_service.field_res_users__properties_company_id
 msgid "Properties Company"
 msgstr ""
 
 #. module: partner_social_service
-#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__contact_type__volunteer
+#: model:ir.model.fields,field_description:partner_social_service.field_res_partner__social_type
+#: model:ir.model.fields,field_description:partner_social_service.field_res_users__social_type
+msgid "Social Type"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model,name:partner_social_service.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: partner_social_service
+#: model:ir.model.fields.selection,name:partner_social_service.selection__res_partner__social_type__social_volunteer
 #: model_terms:ir.ui.view,arch_db:partner_social_service.res_partner_address_type
 msgid "Volunteer"
 msgstr ""
@@ -96,20 +125,20 @@ msgstr ""
 
 #. module: partner_social_service
 #: model:ir.model.fields,field_description:partner_social_service.field_res_company__benefactor_properties_definition
-msgid "benefactor"
+msgid "social_benefactor"
 msgstr ""
 
 #. module: partner_social_service
 #: model:ir.model.fields,field_description:partner_social_service.field_res_company__beneficiary_properties_definition
-msgid "beneficiary"
+msgid "social_beneficiary"
 msgstr ""
 
 #. module: partner_social_service
 #: model:ir.model.fields,field_description:partner_social_service.field_res_company__partner_properties_definition
-msgid "partner"
+msgid "social_partner"
 msgstr ""
 
 #. module: partner_social_service
 #: model:ir.model.fields,field_description:partner_social_service.field_res_company__volunteer_properties_definition
-msgid "volunteer"
+msgid "social_volunteer"
 msgstr ""
