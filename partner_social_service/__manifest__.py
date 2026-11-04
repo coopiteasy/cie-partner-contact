@@ -16,5 +16,6 @@
     ],
     "data": [
         "views/res_partner_views.xml",
+        "security/partner_social_service_security.xml",
     ],
 }
